@@ -10,8 +10,8 @@ public class Contador {
         contador = cont;
     }
 
-    public Contador(int cont, int diferencia) {
-        contador = cont;
+    public Contador(Contador cont) {
+        contador = cont.contador;
     }
 
     public int incrementar() {
