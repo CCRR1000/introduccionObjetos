@@ -24,7 +24,6 @@ public class Principal {
         System.out.println("\nDatos del Cuadrado:");
         System.out.println("Lado: " + cuadrado1.getLado() + ", Area: " + cuadrado1.calcularArea() + ", Perimetro: " + cuadrado1.calcularPerimetro());
 
-
         // ----- Círculos -----
 
         Circulo circulo1 = new Circulo(3);
@@ -64,23 +63,27 @@ public class Principal {
         Fraccion fracciones1 = new Fraccion(1, 8, 4, 7);
         Fraccion fracciones2 = fracciones1;
 
-        fracciones2.setNum1(2);;
-        fracciones2.setDenom1(9);
-        fracciones2.setNum2(3);
-        fracciones2.setDenom2(5);;
+        fracciones2.setNum1(3);;
+        fracciones2.setDenom1(5);
+        fracciones2.setNum2(2);
+        fracciones2.setDenom2(9);;
 
         System.out.println("\nOperaciones:");
         System.out.println("Fraccion 1: "+fracciones1.getNum1()+"/"+fracciones1.getDenom1()+", Fraccion 2: "+fracciones1.getNum2()+"/"+fracciones1.getDenom2());
+        
         double sumaDecimal = fracciones2.sumar();
         System.out.println("Suma: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+sumaDecimal);
+        
         double restaDecimal = fracciones2.restar();
         System.out.println("Resta: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+restaDecimal);
-        double multiplicacionDecimal = fracciones2.dividir();
+        
+        double multiplicacionDecimal = fracciones2.multiplicar();
         System.out.println("Multiplicacion: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+multiplicacionDecimal);
+        
         double divisionDecimal = fracciones2.dividir();
         System.out.println("Division: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+divisionDecimal);
         
-        
+        System.out.println();
     }
 
     
