@@ -1,8 +1,12 @@
 package src;
 
+import java.util.Scanner;
+
 public class Principal {
 
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
 
         // ----- Contadores -----
 
@@ -11,8 +15,8 @@ public class Principal {
 
         contador2.setContador(10);
 
-        System.out.println("\nDatos del Contador:");
-        System.out.println("Contador: " + contador1.getContador() + ", Incremento: " + contador1.incrementar() + ", Decremento: " + contador1.decrementar());
+        System.out.println("\n  Datos del Contador:");
+        System.out.println("  Contador: " + contador1.getContador() + ", Incremento: " + contador1.incrementar() + ", Decremento: " + contador1.decrementar());
 
         // ----- Cuadrados -----
 
@@ -21,8 +25,8 @@ public class Principal {
 
         cuadrado2.setLado(7);
 
-        System.out.println("\nDatos del Cuadrado:");
-        System.out.println("Lado: " + cuadrado1.getLado() + ", Area: " + cuadrado1.calcularArea() + ", Perimetro: " + cuadrado1.calcularPerimetro());
+        System.out.println("\n  Datos del Cuadrado:");
+        System.out.println("  Lado: " + cuadrado1.getLado() + ", Area: " + cuadrado1.calcularArea() + ", Perimetro: " + cuadrado1.calcularPerimetro());
 
         // ----- Círculos -----
 
@@ -31,8 +35,8 @@ public class Principal {
 
         circulo2.setRadio(5);
 
-        System.out.println("\nDatos del Circulo:");
-        System.out.println("Radio: " + circulo1.getRadio() + ", Area: " + circulo1.hallarArea() + ", Perimetro: " + circulo1.hallarPerimetro());
+        System.out.println("\n  Datos del Circulo:");
+        System.out.println("  Radio: " + circulo1.getRadio() + ", Area: " + circulo1.hallarArea() + ", Perimetro: " + circulo1.hallarPerimetro());
 
         // ----- Rectángulos -----
 
@@ -42,21 +46,21 @@ public class Principal {
         rectangulo2.setAlto(2);
         rectangulo2.setAncho(4);
 
-        System.out.println("\nDatos del Rectangulo:");
-        System.out.println("Alto: "+rectangulo1.getAlto()+", Ancho: "+rectangulo1.getAncho()+", Area: "+rectangulo1.calcularArea()+", Perimetro: "+rectangulo1.calcularPerimetro());
+        System.out.println("\n  Datos del Rectangulo:");
+        System.out.println("  Alto: "+rectangulo1.getAlto()+", Ancho: "+rectangulo1.getAncho()+", Area: "+rectangulo1.calcularArea()+", Perimetro: "+rectangulo1.calcularPerimetro());
 
         // ----- Libros -----
 
-        Libro libro1 = new Libro("Harry Potter", "J. K. Rowling", 1997, 1, false);
+        Libro libro1 = new Libro("  Harry Potter", "J. K. Rowling", 1997, 1, false);
         Libro libro2 = libro1;
 
-        libro2.setNombre("Harry Potter y el Principe Mestizo");
+        libro2.setNombre("  Harry Potter y el Principe Mestizo");
         libro2.setVolumen(6);
         libro2.setAnio(2005);
         libro2.setPrestado(true);
 
-        System.out.println("\nDatos del Libro:");
-        System.out.println("Nombre: "+libro1.getNombre()+", Autor: "+libro1.getAutor()+", Anio: "+libro1.getAnio()+", Volumen: "+libro1.getVolumen()+", Esta Prestado: "+libro1.esPrestado());
+        System.out.println("\n  Datos del Libro:");
+        System.out.println("  Nombre: "+libro1.getNombre()+", Autor: "+libro1.getAutor()+", Anio: "+libro1.getAnio()+", Volumen: "+libro1.getVolumen()+", Esta Prestado: "+libro1.esPrestado());
 
         // ----- Fracciones -----
 
@@ -68,22 +72,24 @@ public class Principal {
         fracciones2.setNum2(2);
         fracciones2.setDenom2(9);;
 
-        System.out.println("\nOperaciones:");
-        System.out.println("Fraccion 1: "+fracciones1.getNum1()+"/"+fracciones1.getDenom1()+", Fraccion 2: "+fracciones1.getNum2()+"/"+fracciones1.getDenom2());
+        System.out.println("\n  Operaciones con Fracciones:");
+        System.out.println("  Fraccion 1: "+fracciones1.getNum1()+"/"+fracciones1.getDenom1()+",   Fraccion 2: "+fracciones1.getNum2()+"/"+fracciones1.getDenom2());
         
         double sumaDecimal = fracciones2.sumar();
-        System.out.println("Suma: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+sumaDecimal);
+        System.out.println("   - Suma: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+sumaDecimal);
         
         double restaDecimal = fracciones2.restar();
-        System.out.println("Resta: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+restaDecimal);
+        System.out.println("   - Resta: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+restaDecimal);
         
         double multiplicacionDecimal = fracciones2.multiplicar();
-        System.out.println("Multiplicacion: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+multiplicacionDecimal);
+        System.out.println("   - Multiplicacion: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+multiplicacionDecimal);
         
         double divisionDecimal = fracciones2.dividir();
-        System.out.println("Division: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+divisionDecimal);
+        System.out.println("   - Division: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+divisionDecimal);
         
         System.out.println();
+
+
     }
 
     

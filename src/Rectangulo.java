@@ -13,7 +13,7 @@ public class Rectangulo {
     public void compararLados(double _ancho, double _alto) {
 
         if (ancho == alto) {
-            System.out.println("\nError. El ancho y el alto del rectangulo son iguales. Por favor, redefina los valores.");
+            System.out.println("\n    Error. El ancho y el alto del rectangulo son iguales. Por favor, redefina los valores.");
         } else {
             ancho = _ancho;
             alto = _alto;
