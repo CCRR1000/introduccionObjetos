@@ -13,6 +13,7 @@ public class Persona {
     Random random = new Random();
 
     public Persona() {
+        dni = generarDNI();
     }
 
     public Persona(String _nombre, int _edad, char _sexo) {
@@ -80,8 +81,8 @@ public class Persona {
         }
     }
 
-    public void comprobarSexo(char sexo) {
-        if (sexo == 'M' || sexo == 'm') {
+    public void comprobarSexo(char _sexo) {
+        if (_sexo == 'M' || _sexo == 'm') {
             sexo = FEMENINO;
         } 
         else {
@@ -90,7 +91,7 @@ public class Persona {
     }
 
     public String toString() {
-        return "Nombre: " + nombre + ", Edad: " + edad + ", Peso: " + peso + ", Altura: " + altura + ", Sexo: " + sexo;
+        return "Nombre: " + nombre + ", Edad: " + edad + ", Peso: " + peso + ", Altura: " + altura + ", Sexo: " + sexo + ", DNI: " + getDni();
     }
 
     public int generarDNI() {

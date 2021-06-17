@@ -16,7 +16,7 @@ public class Principal {
         contador2.setContador(10);
 
         System.out.println("\n  Datos del Contador:");
-        System.out.println("  Contador: " + contador1.getContador() + ", Incremento: " + contador1.incrementar() + ", Decremento: " + contador1.decrementar());
+        System.out.println("   - Contador: " + contador1.getContador() + ",\n   - Incremento: " + contador1.incrementar() + ",\n   - Decremento: " + contador1.decrementar());
 
         // ----- Cuadrados -----
 
@@ -26,7 +26,7 @@ public class Principal {
         cuadrado2.setLado(7);
 
         System.out.println("\n  Datos del Cuadrado:");
-        System.out.println("  Lado: " + cuadrado1.getLado() + ", Area: " + cuadrado1.calcularArea() + ", Perimetro: " + cuadrado1.calcularPerimetro());
+        System.out.println("   - Lado: " + cuadrado1.getLado() + ",\n   - Area: " + cuadrado1.calcularArea() + ",\n   - Perimetro: " + cuadrado1.calcularPerimetro());
 
         // ----- Círculos -----
 
@@ -36,7 +36,7 @@ public class Principal {
         circulo2.setRadio(5);
 
         System.out.println("\n  Datos del Circulo:");
-        System.out.println("  Radio: " + circulo1.getRadio() + ", Area: " + circulo1.hallarArea() + ", Perimetro: " + circulo1.hallarPerimetro());
+        System.out.println("   - Radio: " + circulo1.getRadio() + ",\n   - Area: " + circulo1.hallarArea() + ",\n   - Perimetro: " + circulo1.hallarPerimetro());
 
         // ----- Rectángulos -----
 
@@ -47,20 +47,20 @@ public class Principal {
         rectangulo2.setAncho(4);
 
         System.out.println("\n  Datos del Rectangulo:");
-        System.out.println("  Alto: "+rectangulo1.getAlto()+", Ancho: "+rectangulo1.getAncho()+", Area: "+rectangulo1.calcularArea()+", Perimetro: "+rectangulo1.calcularPerimetro());
+        System.out.println("   - Alto: "+rectangulo1.getAlto()+",\n   - Ancho: "+rectangulo1.getAncho()+",\n   - Area: "+rectangulo1.calcularArea()+",\n   - Perimetro: "+rectangulo1.calcularPerimetro());
 
         // ----- Libros -----
 
-        Libro libro1 = new Libro("  Harry Potter", "J. K. Rowling", 1997, 1, false);
+        Libro libro1 = new Libro("Harry Potter", "J. K. Rowling", 1997, 1, false);
         Libro libro2 = libro1;
 
-        libro2.setNombre("  Harry Potter y el Principe Mestizo");
+        libro2.setNombre("Harry Potter y el Principe Mestizo");
         libro2.setVolumen(6);
         libro2.setAnio(2005);
         libro2.setPrestado(true);
 
         System.out.println("\n  Datos del Libro:");
-        System.out.println("  Nombre: "+libro1.getNombre()+", Autor: "+libro1.getAutor()+", Anio: "+libro1.getAnio()+", Volumen: "+libro1.getVolumen()+", Esta Prestado: "+libro1.esPrestado());
+        System.out.println("   - Nombre: "+libro1.getNombre()+",\n   - Autor: "+libro1.getAutor()+",\n   - Anio: "+libro1.getAnio()+",\n   - Volumen: "+libro1.getVolumen()+",\n   - Esta Prestado: "+libro1.esPrestado());
 
         // ----- Fracciones -----
 
@@ -73,7 +73,7 @@ public class Principal {
         fracciones2.setDenom2(9);;
 
         System.out.println("\n  Operaciones con Fracciones:");
-        System.out.println("  Fraccion 1: "+fracciones1.getNum1()+"/"+fracciones1.getDenom1()+",   Fraccion 2: "+fracciones1.getNum2()+"/"+fracciones1.getDenom2());
+        System.out.println(  "   Fraccion 1: "+fracciones1.getNum1()+"/"+fracciones1.getDenom1()+",   Fraccion 2: "+fracciones1.getNum2()+"/"+fracciones1.getDenom2());
         
         double sumaDecimal = fracciones2.sumar();
         System.out.println("   - Suma: "+fracciones1.getNumeradorResultado()+"/"+fracciones2.getDenominadorResultado()+" = "+sumaDecimal);
@@ -118,21 +118,21 @@ public class Principal {
 
         // Control de Peso
         System.out.println("\n\n  Control de Peso por persona:\n");
-        System.out.println("  Nombre: "+persona1.getNombre()+", resultado IMC: "+persona1.estadoIMC(persona1.calcularIMC()));
-        System.out.println("  Nombre: "+persona2.getNombre()+", resultado IMC: "+persona2.estadoIMC(persona2.calcularIMC()));
-        System.out.println("  Nombre: "+persona3.getNombre()+", resultado IMC: "+persona3.estadoIMC(persona3.calcularIMC()));
+        System.out.println("   1. Nombre: "+persona1.getNombre()+", resultado IMC: "+persona1.estadoIMC(persona1.calcularIMC()));
+        System.out.println("   2. Nombre: "+persona2.getNombre()+", resultado IMC: "+persona2.estadoIMC(persona2.calcularIMC()));
+        System.out.println("   3. Nombre: "+persona3.getNombre()+", resultado IMC: "+persona3.estadoIMC(persona3.calcularIMC()));
 
         // Mayoría de edad
         System.out.println("\n\n  Mayoria de Edad:\n");
-        System.out.println("  "+persona1.getNombre()+" "+persona1.mayoriaEdad(persona1.esMayorDeEdad(persona1.getEdad())));
-        System.out.println("  "+persona2.getNombre()+" "+persona2.mayoriaEdad(persona2.esMayorDeEdad(persona2.getEdad())));
-        System.out.println("  "+persona3.getNombre()+" "+persona3.mayoriaEdad(persona3.esMayorDeEdad(persona3.getEdad())));
+        System.out.println("   1. "+persona1.getNombre()+" "+persona1.mayoriaEdad(persona1.esMayorDeEdad(persona1.getEdad())));
+        System.out.println("   2. "+persona2.getNombre()+" "+persona2.mayoriaEdad(persona2.esMayorDeEdad(persona2.getEdad())));
+        System.out.println("   3. "+persona3.getNombre()+" "+persona3.mayoriaEdad(persona3.esMayorDeEdad(persona3.getEdad())));
 
         // Información de cada Persona
         System.out.println("\n\n  Datos de Personas:\n");
-        System.out.println(  "  "+persona1.toString());        
-        System.out.println(  "  "+persona2.toString());        
-        System.out.println(  "  "+persona3.toString());
+        System.out.println(  "   1. "+persona1.toString());        
+        System.out.println(  "   2. "+persona2.toString());        
+        System.out.println(  "   3. "+persona3.toString());
         
         System.out.println("\n");
     }
