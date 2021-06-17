@@ -8,6 +8,7 @@ public class Persona {
     private int edad, dni;
     private double peso, altura;
     private char sexo = 'H';
+    private final char MASCULINO = 'H', FEMENINO = 'M';
 
     Random random = new Random();
 
@@ -17,7 +18,7 @@ public class Persona {
     public Persona(String _nombre, int _edad, char _sexo) {
         nombre = _nombre;
         edad = _edad;
-        sexo = _sexo;
+        comprobarSexo(_sexo);
         dni = generarDNI();
 
     }
@@ -27,7 +28,7 @@ public class Persona {
         edad = _edad;
         peso = _peso;
         altura = _altura;
-        sexo = _sexo;
+        comprobarSexo(_sexo);
         dni = generarDNI();
     }
 
@@ -46,6 +47,18 @@ public class Persona {
         return indice;
     }
 
+    public String estadoIMC(int indice) {
+        String estado;
+        if (indice == -1) {
+            estado = "Está por debajo de su peso ideal.";
+        } else if (indice == 0) {
+            estado = "Está en su peso ideal.";
+        } else {
+            estado = "Tiene sobrepeso.";
+        }
+        return estado;
+    }
+
     public boolean esMayorDeEdad(int edad) {
 
         boolean mayor;
@@ -58,14 +71,26 @@ public class Persona {
         return mayor;
     }
 
+    public String mayoriaEdad(boolean mayorDeEdad) {
+
+        if (mayorDeEdad) {
+            return "Es mayor de Edad.";
+        } else {
+            return "No es mayor de Edad.";
+        }
+    }
+
     public void comprobarSexo(char sexo) {
-        if (sexo != 'F' || sexo != 'f') {
-            sexo = 'H';
+        if (sexo == 'M' || sexo == 'm') {
+            sexo = FEMENINO;
         } 
+        else {
+            sexo = MASCULINO;
+        }
     }
 
     public String toString() {
-        return "Nombre: " + nombre + ", Edad: " + edad + ", Peso: " + peso + ", Altura: " + altura + "Sexo: " + sexo;
+        return "Nombre: " + nombre + ", Edad: " + edad + ", Peso: " + peso + ", Altura: " + altura + ", Sexo: " + sexo;
     }
 
     public int generarDNI() {
@@ -77,40 +102,40 @@ public class Persona {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String _nombre) {
+        nombre = _nombre;
     }
 
     public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setEdad(int _edad) {
+        edad = _edad;
     }
 
     public double getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setPeso(double _peso) {
+        peso = _peso;
     }
 
     public double getAltura() {
         return altura;
     }
 
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setAltura(double _altura) {
+        altura = _altura;
     }
 
     public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
+    public void setSexo(char _sexo) {
+        comprobarSexo(_sexo);;
     }
 
     public int getDni() {

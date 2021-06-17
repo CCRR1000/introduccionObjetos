@@ -90,6 +90,51 @@ public class Principal {
         System.out.println();
 
 
+        // ----- Personas -----
+        System.out.print("  Ingrese nombre: ");
+        String nombre = scan.nextLine();
+        System.out.print("  Ingrese edad: ");
+        int edad = Integer.parseInt(scan.nextLine());
+        System.out.print("  Ingrese sexo (H/M): ");
+        char sexo = scan.next().charAt(0);
+        System.out.print("  Ingrese peso (kg): ");
+        double peso = scan.nextDouble();
+        System.out.print("  Ingrese altura (m): ");
+        double altura = scan.nextDouble();
+
+        // Creación Personas
+        Persona persona1 = new Persona(nombre, edad, peso, altura, sexo);
+        Persona persona2 = new Persona(nombre, edad, sexo);
+        Persona persona3 = new Persona();
+
+        persona2.setAltura(1.79);
+        persona2.setPeso(75);
+
+        persona3.setNombre("Emma Stone");
+        persona3.setEdad(32);
+        persona3.setSexo('m');
+        persona3.setAltura(1.68);
+        persona3.setPeso(52);
+
+        // Control de Peso
+        System.out.println("\n\n  Control de Peso por persona:\n");
+        System.out.println("  Nombre: "+persona1.getNombre()+", resultado IMC: "+persona1.estadoIMC(persona1.calcularIMC()));
+        System.out.println("  Nombre: "+persona2.getNombre()+", resultado IMC: "+persona2.estadoIMC(persona2.calcularIMC()));
+        System.out.println("  Nombre: "+persona3.getNombre()+", resultado IMC: "+persona3.estadoIMC(persona3.calcularIMC()));
+
+        // Mayoría de edad
+        System.out.println("\n\n  Mayoria de Edad:\n");
+        System.out.println("  "+persona1.getNombre()+" "+persona1.mayoriaEdad(persona1.esMayorDeEdad(persona1.getEdad())));
+        System.out.println("  "+persona2.getNombre()+" "+persona2.mayoriaEdad(persona2.esMayorDeEdad(persona2.getEdad())));
+        System.out.println("  "+persona3.getNombre()+" "+persona3.mayoriaEdad(persona3.esMayorDeEdad(persona3.getEdad())));
+
+        // Información de cada Persona
+        System.out.println("\n\n  Datos de Personas:\n");
+        System.out.println(  "  "+persona1.toString());        
+        System.out.println(  "  "+persona2.toString());        
+        System.out.println(  "  "+persona3.toString());
+        
+        System.out.println("\n");
     }
 
     
